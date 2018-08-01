@@ -185,7 +185,7 @@ class LoginEventSubscriber implements EventSubscriberInterface {
 		$shib_vars = array();
 
 		//get the shib variables from the database, default to ritEduAccountType if it's blank
-		$shib_variables = \Drupal::state()->get('shib_role_assign_shib_variable', 'ritEduAiffliation');
+		$shib_variables = \Drupal::state()->get('shib_role_assign_shib_variable', 'ritEduAffliation');
 
 		//loop through the variables
 		if(is_array($shib_variables)){
