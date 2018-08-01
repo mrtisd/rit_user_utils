@@ -29,15 +29,6 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
-	
-	/*if ($route = $collection->get('user.page')) {
-		$route->setDefaults(array(
-			'_title' => 'Login',
-			'_controller' => '\Drupal\rit_user_utils\Controller\RITuserutilsAuthController::auth_check_user',
-		));
-		$route->setRequirement('_user_is_logged_in', 'FALSE');
-		
-    }*/
     if ($route = $collection->get('user.login')) {
     	$route->setDefaults(array(
 			'_title' => 'Login',

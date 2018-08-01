@@ -299,9 +299,6 @@ class LoginEventSubscriber implements EventSubscriberInterface {
 	*   An array of event listener definitions.
 	*/
 	static function getSubscribedEvents() {
-		// Set a low value to start as early as possible.
-		//$events[KernelEvents::REQUEST][] = array('onRequest', 27);
-		
 		$events[KernelEvents::REQUEST][] = ['externalauthLogin'];
 		return $events;
 	}
