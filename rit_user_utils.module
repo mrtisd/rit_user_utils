@@ -1,0 +1,37 @@
+<?php
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function rit_user_utils_page_attachments_alter(array &$page) {
+  // Attaches css assets globally.
+  if (_adminimal_admin_toolbar_is_access()) {
+    $page['#attached']['library'][] = 'rit_user_utils/rit-user-utils';
+  }
+}
+
+/*function rit_user_utils_user_login($account){
+  $goto = \Drupal::request()->query->get('q');
+  $dest = 'destination';
+
+  if($goto==''){
+	$goto = \Drupal::url('<front>');
+	$dest = 'front';
+  }
+
+  if(\Drupal::request()->query->get('destination')!='') {
+	$goto = \Drupal::request()->query->get('destination');
+	$dest = 'destination';	
+  }
+
+  if(($goto=="user%2Flogin")||($goto=="ritlogin")){
+	$goto = '';
+  }
+	
+  if($goto!=''){
+	$response = new TrustedRedirectResponse('https://' . $_SERVER['HTTP_HOST'] . '/' . $GLOBALS['base_path'] . $goto);
+  }else{
+	$response = new TrustedRedirectResponse('https://' . $_SERVER['HTTP_HOST'] . '/' . $GLOBALS['base_path']);
+  }
+
+  return $response;
+}*/

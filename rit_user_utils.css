@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+.rit_user_utils_logoutmessage {
+  /* IE bug hack */
+  text-align: center;
+}
+.rit_user_utils_logoutmessage div {
+  text-align: left;
+  width: 100%;
+  margin: 50px auto 0 auto;
+  padding: 15px 15px 15px 158px;
+  background: #ffebe8 url(alert.png) no-repeat 15px center;
+  border: 3px solid #970000; 
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.rit_user_utils_login {
+   float: right;
+   text-align: right;
+   font-size: 8pt;
+   margin-right: 20px;
+}

@@ -1,0 +1,23 @@
+rit_user_utils.admin:
+    path: '/admin/config/rit_user_utils'
+    defaults:
+        _form: '\Drupal\rit_user_utils\Form\RITForm'
+        _title: 'RIT Login'
+    requirements:
+        _permission: 'administer RIT authentication'
+rit_user_utils.ritlogin:
+  path: '/ritlogin'
+  defaults:
+    _controller: '\Drupal\rit_user_utils\Controller\RITuserutilsAuthController::rit_login'
+  requirements:
+    _access: 'TRUE'
+  options:
+     no_cache: TRUE
+rit_user_utils.cart_login:
+  path: '/checkout/{cart_id}/login'
+  defaults:
+    _controller: '\Drupal\rit_user_utils\Controller\RITuserutilsAuthController::rit_login'
+  requirements:
+    _access: 'TRUE'
+  options:
+     no_cache: TRUE

@@ -1,0 +1,14 @@
+services:
+  rit_user_utils_event_subscriber:
+    class: Drupal\rit_user_utils\EventSubscriber\LoginEventSubscriber
+    arguments: ['@config.factory', '@current_user', '@module_handler', '@url_generator', '@logger.channel.rit_user_utils']
+    tags:
+      - { name: event_subscriber }
+  rit_user_utils.route_subscriber:
+    class: Drupal\rit_user_utils\Routing\RouteSubscriber
+    arguments: ['@config.factory']
+    tags:
+      - { name: event_subscriber }
+  logger.channel.rit_user_utils:
+    parent: logger.channel_base
+    arguments: ['rit_user_utils']

@@ -1,0 +1,3 @@
+administer RIT authentication:
+  description: 'Allow users to control Single Sign On redirect.'
+  title: 'Administer RIT Authentication'

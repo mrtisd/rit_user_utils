@@ -1,0 +1,5 @@
+rit-user-utils:
+  version: VERSION
+  css:
+    theme:
+      css/rit_styles.css: {}

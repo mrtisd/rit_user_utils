@@ -1,0 +1,6 @@
+name: RIT Login
+description: Enables Drupal to work securely with RIT Computer Accounts
+package: RIT
+
+type: module
+core: 8.x

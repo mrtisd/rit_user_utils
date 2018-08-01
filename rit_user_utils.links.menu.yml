@@ -1,0 +1,5 @@
+rit_user_utils.admin:
+    title: 'RIT Login'
+    description: 'Manage RIT Login settings for your site'
+    parent: system.admin_config
+    route_name: rit_user_utils.admin
